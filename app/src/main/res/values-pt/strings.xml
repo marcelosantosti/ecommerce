@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ECommerce</string>
+    <string name="app_name">Simulador de Transações</string>
     <string name="action_settings">Settings</string>
 
     <string name="ops">Ops!</string>
@@ -7,7 +7,7 @@
     <string name="ok">Ok</string>
     <string name="loading">Carregando...</string>
 
-    <string name="add_credit_card">Adicionar Transação</string>
+    <string name="simulate_transaction">Simular Transação</string>
 
     <string name="name">Nome</string>
     <string name="credit_card_type">Tipo do Cartão</string>
@@ -27,6 +27,6 @@
     <string name="digits_verification_digits">Digíto verificador deve conter 3 dígitos.\n</string>
     <string name="required_value">Valor da transação obrigatório.\n</string>
 
-    <string name="no_transaction_created">Nenhuma transação criada. Clique no botão para adicionar.</string>
+    <string name="no_transaction_simulated">Nenhuma transação simulada. Clique no botão para simular uma nova transação.</string>
 
 </resources>

@@ -36,10 +36,10 @@ import java.util.Calendar;
 import java.util.List;
 import java.util.UUID;
 
-@EActivity(R.layout.activity_add_transaction)
+@EActivity(R.layout.activity_simulate_transaction)
 @RoboGuice
 @OptionsMenu(R.menu.menu_add_transaction)
-public class AddTransactionActivity extends BaseActivity {
+public class SimulateTransactionActivity extends BaseActivity {
 
     @ViewById
     public AppCompatEditText editTextName;
@@ -71,7 +71,7 @@ public class AddTransactionActivity extends BaseActivity {
         try {
 
             super.configureActionBar();
-            super.setTitle(R.string.add_credit_card);
+            super.setTitle(R.string.simulate_transaction);
 
             this.loadData();
         }
@@ -188,7 +188,7 @@ public class AddTransactionActivity extends BaseActivity {
 
         int currentYear = Calendar.getInstance().get(Calendar.YEAR);
 
-        for (int i = 1; i <= 10; i++)
+        for (int i = 0; i <= 10; i++)
             listYear.add(currentYear + i);
 
         this.spinnerExpirationYear.setAdapter(new SpinnerAdapter(this, listYear));

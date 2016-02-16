@@ -2,6 +2,7 @@ package com.marcelosantos.ecommerce.domain.model;
 
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
+import com.marcelosantos.ecommerce.infrastructure.common.StringUtil;
 
 import java.util.UUID;
 
@@ -85,5 +86,22 @@ public class CreditCard {
 
     public void setPerson(Person person) {
         this.person = person;
+    }
+
+    public String formatNumber() {
+
+        String formattedNumber = "";
+
+        try {
+
+            if (!StringUtil.isNullOrEmpty(this.number) && this.number.length() == 16)
+                formattedNumber = String.format("%s %s %s %s", this.number.substring(0, 4), this.number.substring(4, 8), this.number.substring(8, 12), this.number.substring(12, 16));
+        }
+        catch (Exception e) {
+
+            formattedNumber = this.number;
+        }
+
+        return formattedNumber;
     }
 }

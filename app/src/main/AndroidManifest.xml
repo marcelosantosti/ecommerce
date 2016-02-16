@@ -29,8 +29,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".userinterface.activity.AddTransactionActivity_"
-            android:label="@string/add_credit_card"
+            android:name=".userinterface.activity.SimulateTransactionActivity_"
+            android:label="@string/simulate_transaction"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

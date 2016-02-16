@@ -1,11 +1,11 @@
 <resources>
-    <string name="app_name">ECommerce</string>
+    <string name="app_name">Transaction Simulator</string>
     <string name="action_settings">Settings</string>
 
     <string name="ops">Ops!</string>
     <string name="general_error">A problem ocurred. Try again.</string>
     <string name="ok">Ok</string>
-    <string name="add_credit_card">Add Transaction</string>
+    <string name="simulate_transaction">Simulate Transaction</string>
     <string name="loading">Loading...</string>
 
     <string name="name">Name</string>
@@ -26,6 +26,6 @@
     <string name="digits_verification_digits">Verification Digit should have 3 digits.\n</string>
     <string name="required_value">Transaction Value is required.\n</string>
 
-    <string name="no_transaction_created">No transaction created. Touch the button to create.</string>
+    <string name="no_transaction_simulated">No transaction simulated. Touch the button to create.</string>
 
 </resources>

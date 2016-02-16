@@ -37,7 +37,7 @@ public class TransactionItemView extends LinearLayout {
 
         this.textViewPersonName.setText(transaction.getCreditCard().getPerson().getName());
         this.textViewCreditCardType.setText(String.format("%s: %s", super.getContext().getString(R.string.credit_card_type), transaction.getCreditCard().getCreditCardType().getDescription()));
-        this.textViewCreditCardNumber.setText(String.format("%s: %s", super.getContext().getString(R.string.credit_card_number), String.valueOf(transaction.getCreditCard().getNumber())));
+        this.textViewCreditCardNumber.setText(String.format("%s: %s", super.getContext().getString(R.string.credit_card_number), String.valueOf(transaction.getCreditCard().formatNumber())));
 
         String creditCardExpirationDate = String.format("%s/%s", new Month(transaction.getCreditCard().getExpirationMonth()).toString(), String.valueOf(transaction.getCreditCard().getExpirationYear()));
 

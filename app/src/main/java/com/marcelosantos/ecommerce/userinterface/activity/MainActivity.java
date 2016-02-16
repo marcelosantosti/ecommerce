@@ -141,7 +141,7 @@ public class MainActivity extends BaseActivity {
 
         try {
 
-            AddTransactionActivity_.intent(this).startForResult(0);
+            SimulateTransactionActivity_.intent(this).startForResult(0);
         }
         catch (Exception e) {
 
