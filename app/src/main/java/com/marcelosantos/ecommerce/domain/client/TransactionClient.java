@@ -16,6 +16,7 @@ public class TransactionClient extends BaseClient implements ITransactionClient 
     @Override
     public ResponseApi save(Transaction transaction) throws IOException {
 
+        //// TODO: 16/02/2016 think about making some chyper on communication with server
         return super.post(this.url, null, ResponseApi.class, transaction);
     }
 }

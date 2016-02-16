@@ -13,6 +13,6 @@ public class LogUtil {
 
         AlertUtil.showOkAlert(context, context.getString(R.string.ops), context.getString(R.string.general_error));
 
-        //log exception with some server integration
+        //// TODO: 16/02/2016 think create local log database to sync with server log database
     }
 }

@@ -47,6 +47,8 @@ public class TransactionService implements ITransactionService {
 
         if (responseApi.isSucess()) {
 
+            //// TODO: 16/02/2016 think about making some chyper on local database
+            
             this.personRepository.create(transaction.getCreditCard().getPerson());
             this.creditCardRepository.create(transaction.getCreditCard());
             this.transactionRepository.create(transaction);

@@ -191,6 +191,8 @@ public class SimulateTransactionActivity extends BaseActivity {
         for (int i = 1; i <= 12; i++)
             listMonth.add(new Month(i));
 
+        //// TODO: 16/02/2016 think about adding default month
+
         this.spinnerExpirationMonth.setAdapter(new SpinnerAdapter(this, listMonth));
     }
 
@@ -202,6 +204,8 @@ public class SimulateTransactionActivity extends BaseActivity {
 
         for (int i = 0; i <= 10; i++)
             listYear.add(currentYear + i);
+
+        //// TODO: 16/02/2016 think about adding default year
 
         this.spinnerExpirationYear.setAdapter(new SpinnerAdapter(this, listYear));
     }
@@ -243,7 +247,7 @@ public class SimulateTransactionActivity extends BaseActivity {
 
         String valueString = this.editTextValue.getText().toString();
 
-        //verify if it´s a valid number
+        //// TODO: 16/02/2016 verify if it´s a valid number
         if (!StringUtil.isNullOrEmpty(valueString))
             value = Double.valueOf(valueString);
 
