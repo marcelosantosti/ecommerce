@@ -89,7 +89,7 @@ public class MainActivity extends BaseActivity {
             this.creditCardTypeService.getDefaultCreditCardTypeApi();
             this.getDefaultCreditCardTypeApiResult();
 
-        } catch (SQLException e) {
+        } catch (Exception e) {
 
             this.onError(e);
         }
