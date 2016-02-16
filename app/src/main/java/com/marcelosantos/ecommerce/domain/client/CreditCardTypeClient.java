@@ -18,18 +18,7 @@ public class CreditCardTypeClient extends BaseClient implements ICreditCardTypeC
     @Override
     public List<CreditCardType> getAll() {
 
-        try {
-
-            CreditCardType[] listCreditCardType = super.get(this.url, null, CreditCardType[].class);
-            return Arrays.asList(listCreditCardType);
-        }
-        catch (Exception e) {
-
-            e.getStackTrace();
-            Log.e("script", e.getMessage());
-
-        }
-
-        return null;
+        CreditCardType[] listCreditCardType = super.get(this.url, null, CreditCardType[].class);
+        return Arrays.asList(listCreditCardType);
     }
 }
