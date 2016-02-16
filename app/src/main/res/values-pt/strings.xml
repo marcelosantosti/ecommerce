@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">ECommerce</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="ops">Ops!</string>
+    <string name="general_error">Um problema ocorreu. Tente novamente.</string>
+    <string name="ok">Ok</string>
+    <string name="loading">Carregando...</string>
+
+    <string name="add_credit_card">Adicionar Transação</string>
+
+    <string name="name">Nome</string>
+    <string name="credit_card_type">Tipo do Cartão</string>
+    <string name="credit_card_number">Número do Cartão</string>
+    <string name="expiration_date">Vencimento</string>
+    <string name="verification_digit">Dígito Verificador</string>
+    <string name="value">Valor</string>
+    <string name="save">Salvar</string>
+
+    <string name="required_name">Nome obrigatório.\n</string>
+    <string name="required_credit_card_type">Tipo do cartao de crédito obrigatório.\n</string>
+    <string name="required_credit_card_number">Número do cartão de crédito obrigatório.\n</string>
+    <string name="digits_credit_card_number">Número do cartão de crédito deve conter 16 dígitos.\n</string>
+    <string name="required_expiration_month">Mês de validade obrigatório.\n</string>
+    <string name="required_expiration_year">Ano de validade obrigatório.\n</string>
+    <string name="required_verification_digit">Digíto verificador obrigatório.\n</string>
+    <string name="digits_verification_digits">Digíto verificador deve conter 3 dígitos.\n</string>
+    <string name="required_value">Valor da transação obrigatório.\n</string>
+
+    <string name="no_transaction_created">Nenhuma transação criada. Clique no botão para adicionar.</string>
+
+</resources>
