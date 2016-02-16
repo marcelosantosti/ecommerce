@@ -6,6 +6,7 @@
     <string name="general_error">Um problema ocorreu. Tente novamente.</string>
     <string name="ok">Ok</string>
     <string name="loading">Carregando...</string>
+    <string name="select">Selecione</string>
 
     <string name="simulate_transaction">Simular Transação</string>
 

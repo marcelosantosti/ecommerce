@@ -63,7 +63,7 @@ public class TransactionService implements ITransactionService {
             stringBuilder.append(this.context.getString(R.string.required_name));
 
         if (transaction.getCreditCard().getCreditCardType() == null)
-            stringBuilder.append(this.context.getString(R.string.credit_card_type));
+            stringBuilder.append(this.context.getString(R.string.required_credit_card_type));
 
         if (StringUtil.isNullOrEmpty(transaction.getCreditCard().getNumber()))
             stringBuilder.append(this.context.getString(R.string.required_credit_card_number));

@@ -71,6 +71,7 @@ public class SimulateTransactionActivity extends BaseActivity {
         try {
 
             super.configureActionBar();
+            super.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             super.setTitle(R.string.simulate_transaction);
 
             this.loadData();
@@ -105,6 +106,12 @@ public class SimulateTransactionActivity extends BaseActivity {
 
             super.catchException(e);
         }
+    }
+
+    @OptionsItem(android.R.id.home)
+    public void onBackClicked() {
+
+        super.onBackPressed();
     }
 
     private void save() {
@@ -163,6 +170,11 @@ public class SimulateTransactionActivity extends BaseActivity {
     private void loadCardcreditType() throws SQLException {
 
         List<CreditCardType> listCreditCardType = this.creditCardTypeRepository.queryForAll();
+
+        CreditCardType defaultCreditCardType = new CreditCardType();
+        defaultCreditCardType.setDescription(super.getString(R.string.select));
+
+        listCreditCardType.add(0, defaultCreditCardType);
         this.spinnerCreditCardType.setAdapter(new SpinnerAdapter(this, listCreditCardType));
     }
 
@@ -201,7 +213,11 @@ public class SimulateTransactionActivity extends BaseActivity {
 
         CreditCard creditCard = new CreditCard();
         creditCard.setId(UUID.randomUUID());
-        creditCard.setCreditCardType((CreditCardType) this.spinnerCreditCardType.getSelectedItem());
+
+        CreditCardType selectedCreditCardType = (CreditCardType) this.spinnerCreditCardType.getSelectedItem();
+
+        if (selectedCreditCardType.getId() != null)
+            creditCard.setCreditCardType(selectedCreditCardType);
 
         Month selectedMonth = (Month)this.spinnerExpirationMonth.getSelectedItem();
         creditCard.setExpirationMonth(selectedMonth.getNumber());
