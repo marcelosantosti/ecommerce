@@ -14,6 +14,7 @@ Este projeto é um aplicativo simples desenvolvido para Android que visa apenas 
 - Fabric (Crashlytics para crash report e Awnsers para estatística de utilização)
 
 ### TO-DO ###
-- Substituição do ORMLite pelo Realmente
+- Substituição do ORMLite pelo Realm
 - Tornar o banco de dados criptografado
 - Incluir um mecanismo de segurança na comunicação com a API.
+- Tornar a camada de apresentação mais amigável e com animações
