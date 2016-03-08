@@ -2,7 +2,8 @@ package com.marcelosantos.ecommerce.domain.client;
 
 import android.util.Log;
 
-import org.codehaus.jackson.JsonGenerationException;
+import com.marcelosantos.ecommerce.BuildConfig;
+
 import org.codehaus.jackson.map.ObjectMapper;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
@@ -17,7 +18,7 @@ import java.util.HashMap;
  */
 public class BaseClient {
 
-    public static final String ROOT_URL = "http://private-6ab87-ecommerce10.apiary-mock.com";
+    public static final String ROOT_URL = BuildConfig.ROOT_URL;
 
     protected RestTemplate restTemplate;
 

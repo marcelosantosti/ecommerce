@@ -2,6 +2,7 @@ package com.marcelosantos.ecommerce.infrastructure.common;
 
 import android.content.Context;
 
+import com.crashlytics.android.Crashlytics;
 import com.marcelosantos.ecommerce.R;
 
 /**
@@ -11,8 +12,8 @@ public class LogUtil {
 
     public static void catchException(Context context, Exception e) {
 
-        AlertUtil.showOkAlert(context, context.getString(R.string.ops), context.getString(R.string.general_error));
+        Crashlytics.logException(e);
 
-        //// TODO: 16/02/2016 think create local log database to sync with server log database
+        AlertUtil.showOkAlert(context, context.getString(R.string.ops), context.getString(R.string.general_error));
     }
 }

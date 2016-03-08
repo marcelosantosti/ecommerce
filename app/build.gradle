@@ -1,4 +1,19 @@
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.+'
+    }
+}
 apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+}
+
 apply plugin: 'android-apt'
 
 android {
@@ -27,7 +42,11 @@ android {
         versionName "1.0"
     }
     buildTypes {
+        debug {
+            buildConfigField "String", "ROOT_URL", "\"http://private-6ab87-ecommerce10.apiary-mock.com\""
+        }
         release {
+            buildConfigField "String", "ROOT_URL", "\"http://private-6ab87-ecommerce10.apiary-mock.com\""
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
@@ -56,10 +75,13 @@ dependencies {
     compile 'org.springframework.android:spring-android-rest-template:1.0.1.RELEASE'
 
     compile 'com.github.pinball83:masked-edittext:1.0.3'
+    compile('com.crashlytics.sdk.android:crashlytics:2.5.5@aar') {
+        transitive = true;
+    }
 }
 
 project.tasks.withType(JavaCompile) { task ->
-    options.compilerArgs << "-AguiceAnnotationDatabasePackageName=eco.android.padsamu"
+    options.compilerArgs << "-AguiceAnnotationDatabasePackageName='com.marcelosantos.ecommerce"
 }
 
 apt {

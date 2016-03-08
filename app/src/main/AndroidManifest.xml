@@ -30,6 +30,9 @@
             android:name=".userinterface.activity.SimulateTransactionActivity_"
             android:label="@string/simulate_transaction"
             android:theme="@style/AppTheme.NoActionBar"></activity>
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="e48580b4f8ab6ad1fa4f5b96b140bb7be5dca826" />
     </application>
 
 </manifest>

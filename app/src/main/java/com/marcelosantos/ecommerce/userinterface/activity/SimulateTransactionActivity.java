@@ -16,6 +16,8 @@ import com.marcelosantos.ecommerce.domain.model.CreditCardType;
 import com.marcelosantos.ecommerce.domain.model.Person;
 import com.marcelosantos.ecommerce.domain.model.Transaction;
 import com.marcelosantos.ecommerce.infrastructure.common.StringUtil;
+import com.marcelosantos.ecommerce.infrastructure.common.TrackUtil;
+import com.marcelosantos.ecommerce.infrastructure.common.ValidationException;
 import com.marcelosantos.ecommerce.userinterface.adapter.SpinnerAdapter;
 import com.marcelosantos.ecommerce.userinterface.model.Month;
 
@@ -87,6 +89,8 @@ public class SimulateTransactionActivity extends BaseActivity {
 
         try {
 
+            TrackUtil.trackContentView(super.getString(R.string.track_transaction_saved_button));
+
             this.save();
         }
         catch (Exception e) {
@@ -99,6 +103,8 @@ public class SimulateTransactionActivity extends BaseActivity {
     public void onMenuSaveClicked() {
 
         try {
+
+            TrackUtil.trackContentView(super.getString(R.string.track_transaction_saved_toolbar));
 
             this.save();
         }
@@ -139,6 +145,9 @@ public class SimulateTransactionActivity extends BaseActivity {
 
     @UiThread
     public void onError(Exception e) {
+
+        if (e instanceof ValidationException)
+            TrackUtil.trackContentView(super.getString(R.string.track_transaction_saved_button), e.getMessage());
 
         super.catchException(e);
     }

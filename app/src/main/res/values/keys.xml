@@ -2,4 +2,10 @@
 <resources>
     <string name="key_transaction">transaction</string>
     <string name="key_load_default_credit_card_type">loadDefaultCreditCardType</string>
+    <string name="track_enter_main_activity">Main Activity Entered</string>
+    <string name="track_new_transaction_clicked">New Transaction Clicked</string>
+    <string name="track_enter_transaction_activity">Transaction Activity Entered</string>
+    <string name="track_transaction_saved_toolbar">Toolbar Transaction Clicked</string>
+    <string name="track_transaction_saved_button">Button Transaction Clicked</string>
+    <string name="track_transaction_validation_error">Transaction Validation Error</string>
 </resources>

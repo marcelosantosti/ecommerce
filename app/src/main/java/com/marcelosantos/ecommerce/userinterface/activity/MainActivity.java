@@ -12,6 +12,7 @@ import com.marcelosantos.ecommerce.domain.interfaces.repository.ITransactionRepo
 import com.marcelosantos.ecommerce.domain.interfaces.service.ICreditCardTypeService;
 import com.marcelosantos.ecommerce.domain.model.Transaction;
 import com.marcelosantos.ecommerce.infrastructure.common.SharedPreferencesUtil;
+import com.marcelosantos.ecommerce.infrastructure.common.TrackUtil;
 import com.marcelosantos.ecommerce.userinterface.adapter.TransactionAdapter;
 
 import org.androidannotations.annotations.AfterViews;
@@ -54,6 +55,8 @@ public class MainActivity extends BaseActivity {
     public void init() {
 
         try {
+
+            TrackUtil.trackContentView(super.getString(R.string.track_enter_main_activity));
 
             super.configureActionBar();
             super.setTitle(R.string.app_name);
@@ -105,7 +108,7 @@ public class MainActivity extends BaseActivity {
     public void getDefaultCreditCardTypeApiResult() {
 
         super.removeProgress();
-        sharedPreferencesUtil.putBoolean(this.keyLoadDefaultCreditCardType, false);
+        this.sharedPreferencesUtil.putBoolean(this.keyLoadDefaultCreditCardType, false);
     }
 
     private void loadTransactions() throws SQLException {
@@ -140,6 +143,8 @@ public class MainActivity extends BaseActivity {
     public void onButtonAddCreditCardClicked() {
 
         try {
+
+            TrackUtil.trackContentView(super.getString(R.string.track_new_transaction_clicked));
 
             SimulateTransactionActivity_.intent(this).startForResult(0);
         }

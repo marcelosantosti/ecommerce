@@ -2,6 +2,8 @@ package com.marcelosantos.ecommerce;
 
 import android.app.Application;
 
+import com.crashlytics.android.Crashlytics;
+import io.fabric.sdk.android.Fabric;
 import roboguice.RoboGuice;
 
 /**
@@ -13,6 +15,7 @@ public class ECommerceApplication extends Application {
     public void onCreate() {
 
         super.onCreate();
+        Fabric.with(this, new Crashlytics());
         RoboGuice.setUseAnnotationDatabases(false);
     }
 }
