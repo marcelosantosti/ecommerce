@@ -16,7 +16,7 @@ Este projeto é um aplicativo simples desenvolvido para Android que visa apenas 
 ### TO-DO ###
 - Substituição do ORMLite pelo Realm
 - Tornar o banco de dados criptografado
-- Incluir um mecanismo de segurança na comunicação com a API.
+- Incluir um mecanismo de segurança na comunicação com a API
 - Tornar a camada de apresentação mais amigável e com animações
 - Substituir o padrão se nomenclatura das interfaces
 - ...
