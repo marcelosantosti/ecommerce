@@ -1,22 +1,21 @@
 # Transaction Simulator
-Simulador de transações E-Commerce
+E-Commerce Transaction Simulator to Android Platform.
 
-#Descrição
+#Description
 
-Este projeto é um aplicativo simples desenvolvido para Android que visa apenas simular uma transação de cartão de crédito utilizando uma API mockada através do Apiary e armazenar localmente as simulações realizadas. Além disso, o projeto visa demonstrar um arquitura baseada na arquitetura proposta pelo DDD aplicada em um projeto para a plataforma Android.
+This project is a simple app developed to Android platform whose objective is to simulate an credit card transaction using an API and store locally the information inputed. Besides that, the project shows a architecture proposed by Martin Fowler, that is called DDD, in a project to Android platform.
 
-### Frameworks Utilizados ###
-- AndroidAnnotations (view injection e processamento em background)
-- RoboGuice (dependency injection)
-- Spring Framework Rest (auxiliar para requisições a serviços REST)
-- Jackson (serialização e deserialização de objetos em JSON)
-- OrmLite (ORM para persistência de dados localmente utilizando SQLite)
-- Fabric (Crashlytics para crash report e Awnsers para estatística de utilização)
+### Frameworks ###
+- AndroidAnnotations: view injection e background processing
+- RoboGuice: dependency injection
+- Spring Framework Rest: rest HTTP requests
+- Jackson: JSON serialization and deserializations
+- OrmLite: ORM to save and query data on SQLite
+- Fabric: Crashlytics to crash report and Awnsers to usage statistics
 
 ### TO-DO ###
-- Substituição do ORMLite pelo Realm
-- Tornar o banco de dados criptografado
-- Incluir um mecanismo de segurança na comunicação com a API
-- Tornar a camada de apresentação mais amigável e com animações
-- Substituir o padrão se nomenclatura das interfaces
-- ...
+- Change ORMLite to Realm
+- Database cryptography
+- Security on API call
+- More friendly user interface with animation
+- Change the name pattern of interfaces
